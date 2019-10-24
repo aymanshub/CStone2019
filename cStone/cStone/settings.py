@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
+    'main.apps.MainConfig',
+    'orders.apps.OrdersConfig',
+    'customers.apps.CustomersConfig',
 ]
 
 MIDDLEWARE = [
@@ -79,10 +81,10 @@ WSGI_APPLICATION = 'cStone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fhbcpnfb',
-        'USER': 'fhbcpnfb',
-        'PASSWORD': 'L0yXMhfkhi6cbSkH0o98D7gO3wVWV1iT',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hphimzbd',
+        'USER': 'hphimzbd',
+        'PASSWORD': 'EqigYiX3C6-Do81MyIJCozkLwTleFJgh',
         'HOST': 'dumbo.db.elephantsql.com',
         'PORT': '5432'
     }
@@ -126,5 +128,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'assets'),
+#     ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
