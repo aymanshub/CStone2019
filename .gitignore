@@ -150,6 +150,8 @@ pip-selfcheck.json
 
 ### PyCharm ###
 .idea/
+*.jpg
+.idea/workspace.xml
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
