@@ -23,7 +23,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = [
         'category', 'stone', 'name', 'length', 'width',
         'processing', 'stock_units', 'available', 'price', 'image',
-        'total_space_M',
+        'total_space_m',
     ]
     list_editable = ['price', 'available']
     prepopulated_fields = {'slug': ('category', 'stone',
