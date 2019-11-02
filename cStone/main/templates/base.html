@@ -13,9 +13,9 @@
       href="{% static "css/bootstrap.min.css" %}">
     <title>CStone 2019</title>
   </head>
-  <body>
+  <body style="direction: rtl" class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">BookTime</a>
+      <a class="navbar-brand" href="/">CStone</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -28,8 +28,9 @@
         id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li
-            class="nav-item {% if request.path == "/" %}active{% endif %}">
-            <a class="nav-link" href="/">Home</a>
+            {% url 'main:new_quote' as new_quote_url %}
+            class="nav-item {% if request.path == new_quote_url %}active{% endif %}">
+            <a class="nav-link" href="{{new_quote_url}}">הצעת מחיר</a>
           </li>
           <li
             class="nav-item {% if request.path == "/about-us/" %}active{% endif %}">
